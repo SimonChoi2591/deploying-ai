@@ -1,0 +1,12 @@
+.env
+.secrets
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.gradio/
+# ChromaDB persistence is intentionally NOT ignored: include the populated
+# knowledge_base/chroma_db/ directory in the assignment submission.
+# Never commit transient SQLite journal files from a running application.
+*.sqlite3-wal
+*.sqlite3-shm

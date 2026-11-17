@@ -1,0 +1,146 @@
+[
+  {
+    "id": "rag_basics",
+    "title": "Retrieval-Augmented Generation (RAG)",
+    "text": "RAG retrieves relevant external passages before an LLM generates an answer. A typical pipeline chunks source documents, embeds chunks, searches a vector store, and supplies retrieved context to the LLM. Retrieval can reduce unsupported claims, but sources still need verification.",
+    "concepts": [
+      "rag",
+      "embeddings",
+      "vector_db",
+      "llm"
+    ]
+  },
+  {
+    "id": "embeddings",
+    "title": "Embeddings and semantic similarity",
+    "text": "An embedding is a numeric representation of text. Similar meanings can be placed near each other in a vector space. Semantic retrieval compares query and document embeddings using distance or similarity metrics. Embedding quality depends on the model and domain.",
+    "concepts": [
+      "embeddings",
+      "vector_db",
+      "rag"
+    ]
+  },
+  {
+    "id": "chromadb",
+    "title": "ChromaDB persistent vector storage",
+    "text": "ChromaDB is a vector database used to store documents, IDs, metadata, and embeddings. chromadb.PersistentClient(path=...) persists a collection on disk. A query can supply a precomputed query embedding and request the nearest matching documents.",
+    "concepts": [
+      "vector_db",
+      "embeddings",
+      "rag"
+    ]
+  },
+  {
+    "id": "supervised",
+    "title": "Supervised vs unsupervised learning",
+    "text": "Supervised learning uses labeled examples to learn predictions, such as classifying emails. Unsupervised learning explores patterns without target labels, such as clustering similar observations. Choose methods based on data and task.",
+    "concepts": [
+      "ml",
+      "classification"
+    ]
+  },
+  {
+    "id": "overfit",
+    "title": "Overfitting and validation",
+    "text": "Overfitting occurs when a model learns training-specific noise and performs poorly on new data. Use separate training and validation/test sets, cross-validation, regularization, and monitoring of generalization gaps.",
+    "concepts": [
+      "ml",
+      "overfitting",
+      "evaluation"
+    ]
+  },
+  {
+    "id": "deep",
+    "title": "Deep learning and neural networks",
+    "text": "Deep learning uses neural networks with multiple processing layers. CNNs are commonly used for images; transformers use attention mechanisms and are widely used in language models. Training updates weights to reduce a loss function.",
+    "concepts": [
+      "deep_learning",
+      "ml",
+      "llm"
+    ]
+  },
+  {
+    "id": "llm",
+    "title": "Large language models and tokens",
+    "text": "LLMs predict and generate sequences of tokens based on learned statistical patterns. Tokens are text units rather than necessarily complete words. A context window limits the input and output that can be considered in one request.",
+    "concepts": [
+      "llm",
+      "memory"
+    ]
+  },
+  {
+    "id": "prompt",
+    "title": "System prompts and prompt injection",
+    "text": "A system prompt defines application-level behavior. Prompt injection attempts to make untrusted content override instructions. Defenses include separating trusted instructions from data, validating tool arguments, restricting privileges, and testing refusals.",
+    "concepts": [
+      "guardrails",
+      "llm"
+    ]
+  },
+  {
+    "id": "tools",
+    "title": "Function calling with language models",
+    "text": "Function calling lets an LLM select a declared tool and return structured arguments. Application code validates arguments, executes the function, and passes the result back to the model. The LLM does not execute Python code itself.",
+    "concepts": [
+      "function_calling",
+      "api",
+      "llm"
+    ]
+  },
+  {
+    "id": "api",
+    "title": "REST APIs and JSON",
+    "text": "An API exposes defined operations to software clients. REST-style HTTP APIs often use GET for retrieval and JSON for structured responses. Applications should validate response fields, handle timeouts, and convert raw data into useful user-facing explanations.",
+    "concepts": [
+      "api",
+      "python"
+    ]
+  },
+  {
+    "id": "python_dict",
+    "title": "Python lists and dictionaries",
+    "text": "Python lists store ordered sequences and use numeric indices. Dictionaries map unique keys to values and support lookup by key. Example: scores = {\"Ada\": 95}; scores[\"Ada\"] retrieves 95.",
+    "concepts": [
+      "python",
+      "python_types"
+    ]
+  },
+  {
+    "id": "python_functions",
+    "title": "Python functions",
+    "text": "Python functions are defined with def and can accept parameters and return values. Functions improve reuse and testing. Example: def power(v, i): return v * i.",
+    "concepts": [
+      "python",
+      "function_calling"
+    ]
+  },
+  {
+    "id": "memory",
+    "title": "Chat history and bounded memory",
+    "text": "Conversation history helps an assistant interpret follow-up questions. A simple strategy retains only the most recent exchanges. More advanced strategies summarize earlier turns or store important facts separately. Truncation can lose context.",
+    "concepts": [
+      "memory",
+      "llm"
+    ]
+  },
+  {
+    "id": "eval",
+    "title": "Evaluating LLM applications",
+    "text": "LLM evaluation may assess factual correctness, retrieval relevance, faithfulness to sources, latency, cost, and safety. Offline tests and human review complement model-based judges. Test the full pipeline, not only the base model.",
+    "concepts": [
+      "evaluation",
+      "rag",
+      "guardrails"
+    ]
+  },
+  {
+    "id": "classification",
+    "title": "Classification metrics",
+    "text": "Precision is the fraction of predicted positives that are correct; recall is the fraction of actual positives found. F1 is their harmonic mean. Accuracy can be misleading for highly imbalanced classes.",
+    "concepts": [
+      "classification",
+      "evaluation",
+      "ml"
+    ]
+  }
+]
